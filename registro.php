@@ -22,7 +22,7 @@ if (empty($nome) or empty($username) or empty($senha) or empty($celular)) {
 }
 
 $sql = "INSERT INTO consani (codUsuario, username, nome, senha, cidade, celular) 
-            VALUES (NULL, '$username', '$nome', '$senha', '$cidade', '$celular')";
+            VALUES (NULL, '$username', '$nome', '$senha', '$cidade', '$celular')"; // Inserindo os dados no Banco de Dados.
 
 $username_existe = mysqli_query($conexao, "SELECT * FROM consani WHERE username= '$username'"); // Verificando se este username já existe.
 if (mysqli_num_rows($username_existe) >= 1) {
@@ -31,7 +31,7 @@ if (mysqli_num_rows($username_existe) >= 1) {
     echo "<p style='font-size: 25px'><a href='index_cadastros.html'>Voltar ↺</a></p>";
     exit;
 }
-$resultado = mysqli_query($conexao, $sql); // Gravando os cadastros feitos no banco de dados
+$resultado = mysqli_query($conexao, $sql); // Gravando os cadastros feitos no banco de dados.
 
 if (!$resultado)
     echo "<h2 style='color: red'>Erro na Gravação do registro ;-;.</h2>";
