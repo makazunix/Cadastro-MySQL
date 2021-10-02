@@ -3,7 +3,7 @@
 <body>
 
 <?php
-$conexao = mysqli_connect("localhost", "root", "", "marcos");
+$conexao = mysqli_connect("localhost", "root", "", "marcos"); // Criando Conexão no banco "marcos"
 if ($conexao == false){
     echo "<h3>Não foi possível entrar no servidor .-.</h3>";
     exit;
@@ -18,8 +18,9 @@ if (empty($username) or empty($senha)) {
     exit;
 }
 
-$verify_row = mysqli_query($conexao,"SELECT * FROM consani WHERE username='$username' AND senha='$senha'");
-if (mysqli_num_rows($verify_row) == 1) {
+$verify_row = mysqli_query($conexao,"SELECT * FROM consani WHERE username='$username' AND senha='$senha'"); // Pegando a senha e um usuário da tabela "consani"
+
+if (mysqli_num_rows($verify_row) == 1) { // Verificando o número de cadastros com essa mesma senha e usuário 
     echo "<h2 style='color: blueviolet; font-family:Comic Sans MS, serif'>Login efetuado com Sucesso.<br>
            Seja Bem-vindo <b style='color: black'>$username</b>! ^^</h2>";
 } else {
