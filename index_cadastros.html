@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tela de Cadastro</title>
+    <link href="estilo_forms.css" rel="stylesheet">
+</head>
+<body style="background-color: lavender">
+    <h1 style="text-align: center; color: cadetblue;">➳ Cadastro</h1>
+    <hr style="margin: 0 400px">
+
+    <form action="registro.php" method="POST">
+        <p style="font-size: 22px"> Nome: <input type="text" name="nome" style="font-size: 18px"></p>
+        <p style="font-size: 22px"> Username: <input type="text" name="username" style="font-size: 18px"></p>
+        <p style="font-size: 22px"> Senha: <input type="password" name="senha" style="font-size: 18px"></p>
+        <p style="font-size: 22px"> Cidade: <input type="text" name="cidade"
+                                                   style="font-size: 18px"></p>
+        <p style="font-size: 22px"> Celular: <input type="text" name="celular"
+                                                    style="font-size: 18px" placeholder="(00) 00000-0000"
+                                                    minlength="3" maxlength="11" ></p>
+        <br>
+
+        <input class="botoes" type="submit" value="Enviar" style="font-size: 17px">
+        <input class="botoes" type="reset" value="Limpar" style="font-size: 17px">
+        <a href="index_login.html"><input class="botoes"
+                                          type="button" value="Login" style="font-size: 17px"></a>
+    </form>
+</body>
+</html>
